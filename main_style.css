@@ -28,13 +28,14 @@ body {
     margin: 0;
 }
 
-.project-list li {
-    margin-bottom: 0.8rem;
+.project-list li.main-nav-item {
+    margin-bottom: 0.8rem; /* Zde si nastavte malou mezeru podle sebe */
 }
+
 
     /* Prázdný řádek pro mezeru */
     .project-list li.nav-spacer {
-        height: 0.8rem;
+        height: 0.1rem;
         margin: 0;
     }
 
@@ -83,7 +84,7 @@ body {
 /* ZMĚNA: Přejmenováno z .nav-arrow na .nav-expand-arrow */
 .nav-expand-arrow {
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     margin-left: 5px;
     display: flex;
     align-items: center;

@@ -12,6 +12,8 @@ function createNav(relativePath = '', activePageID = '') {
                        class="name-link ${activePageID === 'main' ? 'active' : ''}">
                        Matyas Kunstmüller
                     </a>`,
+
+        omne: `<a href="${relativePath}o-mne/omne.html" class="${activePageID === 'omne' ? 'active' : ''}">O mně</a>`,
         portfolio: `<a href="${relativePath}projects/book/bookengine.html" 
                        class="${activePageID.startsWith('portfolio') ? 'active' : ''}">
                        Portfolio
@@ -63,7 +65,19 @@ function createNav(relativePath = '', activePageID = '') {
     // Jméno
     navHTML += `<li>${mainLinks.main}</li>`;
     navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+  
 
+navHTML += `<li>${mainLinks.omne}</li>`;
+navHTML += `<li class="nav-spacer"></li>`;
+navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
     // --- PORTFOLIO ---
     const isPortfolioOpen = activePageID.startsWith('portfolio') ? 'open' : '';
     navHTML += `<li class="has-submenu ${isPortfolioOpen}">`;
@@ -73,7 +87,9 @@ function createNav(relativePath = '', activePageID = '') {
     navHTML += `</div>`;
     navHTML += buildSubNav(portfolioSubNav);
     navHTML += `</li>`;
-
+navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
+    navHTML += `<li class="nav-spacer"></li>`;
     // --- PROJEKTY ---
     const isProjektyOpen = activePageID.startsWith('projekty') ? 'open' : '';
     navHTML += `<li class="has-submenu ${isProjektyOpen}">`;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mně - Matyas Kunstmüller</title>
+    <link rel="stylesheet" href="../main_style.css">
+    <style>
+        .intro-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            cursor: pointer;
+        }
+        .intro-image {
+            max-width: 90%;
+            max-height: 80vh;
+            display: none;
+        }
+        .intro-image.active {
+            display: block;
+        }
+        .real-content {
+            display: none;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 1px solid #333;
+            margin-bottom: 2rem;
+        }
+        .bio-text {
+            line-height: 1.6;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <main class="content-column">
+        <div id="interactive-intro" class="intro-container">
+            <img src="tak bojuj ne.png" id="img1" class="intro-image active" alt="Tak bojuj ne">
+            <img src="a jak mam bojovat.png" id="img2" class="intro-image" alt="A jak mam bojovat">
+        </div>
+
+        <div id="final-content" class="real-content">
+            <img src="https://via.placeholder.com/400x500" class="profile-img" alt="Matyas Kunstmüller">
+            <div class="bio-text">
+                <h1>O mně</h1>
+                <p>Zde bude váš text ve sloupečku pod fotkou.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../nav.js"></script>
+    <script>
+        // Parametr '../' říká, že kořen webu je o jednu složku výš
+        if (typeof createNav === 'function') {
+            createNav('../', 'omne');
+        }
+
+        const introSection = document.getElementById('interactive-intro');
+        const finalContent = document.getElementById('final-content');
+        const img1 = document.getElementById('img1');
+        const img2 = document.getElementById('img2');
+
+        let step = 1;
+
+        introSection.addEventListener('click', () => {
+            if (step === 1) {
+                img1.classList.remove('active');
+                img2.classList.add('active');
+                step = 2;
+            } else if (step === 2) {
+                introSection.style.display = 'none';
+                finalContent.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
