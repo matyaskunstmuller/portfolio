@@ -17,7 +17,7 @@ html, body {
 body {
     background-color: #000;
     color: #fff;
-    font-family: 'Roboto Mono', monospace;
+    font-family: sans-serif;
     overflow: hidden;
     display: flex;
 }
@@ -28,10 +28,7 @@ body {
     margin: 0;
 }
 
-/* ZMĚNA: ODSTRANĚN MARGIN, KTERÝ JSEM PŘIDAL */
-.project-list > ul > li {
-    /* margin-bottom: 1.2rem;  <-- SMAZÁNO */
-}
+
 
 /* Spacer */
 .project-list li.nav-spacer {

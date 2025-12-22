@@ -6,7 +6,48 @@
     <title>Skicákové portfolio</title>
     <link rel="stylesheet" href="../../main_style.css" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+    /* 1. Hlavní úroveň navigace (odpovídá 1rem) */
+    #nav-placeholder .project-list a.name-link,
+    #nav-placeholder .project-list > ul > li > .nav-row a {
+        font-size: 16px !important;
+        -webkit-text-size-adjust: none !important;
+        text-size-adjust: none !important;
+    }
+
+    /* 2. Sub-bar úroveň (odpovídá 0.9rem) */
+    #nav-placeholder .sub-nav-item a {
+        font-size: 14.4px !important; /* Přesný přepočet z 0.9rem */
+        -webkit-text-size-adjust: none !important;
+        text-size-adjust: none !important;
+    }
+
+    /* Pojistka proti rozbití layoutu při zoomu */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+</style>
 </head>
+<body>
+    <div id="nav-placeholder" class="nav-column"></div>
+    
+    <script>
+        // Tento skript se podívá, jestli v odkazu není ?spread=X
+        // Pokud ano, převede to na hash, na který tvůj flipbook slyší, 
+        // ale udělá to až po načtení, takže to nerozbije měřítko stránky.
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const spread = urlParams.get('spread');
+            if (spread) {
+                // Pošle informaci tvému flipbook skriptu bez skákání stránky
+                window.location.hash = "spread=" + spread;
+            }
+        });
+    </script>
+</body>
+</html>
 <body>
     <div id="nav-placeholder" class="nav-column"></div>
 
@@ -48,6 +89,7 @@
         <div id="lightbox-reel"></div>
         <div id="lightbox-dots"></div>
     </div>
+
     <script src="../../nav.js"></script>
     <script src="buttons.js"></script>
     <script src="script.js"></script>

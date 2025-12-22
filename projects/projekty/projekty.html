@@ -3,47 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekty</title>
-
+    <title>Projekty - Detail</title>
     <link rel="stylesheet" href="../../main_style.css">
+    
+    <style>
+        /* ZÁKLADNÍ NASTAVENÍ */
+        body {
+            background-color: #000; /* Předpokládám tmavé pozadí podle tvého stylu */
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .projekty-text-wrapper {
+            padding: 3rem 3rem;
+            max-width: 1400px; /* Dostatečná šířka pro 3 sloupce */
+            margin: 0;
+        }
+
+        /* ODDĚLOVAČ ROKŮ */
+        .year-label {
+            color: #ccc;
+            font-size: 0.8rem;
+            margin: 60px 0 30px 0;
+            display: block;
+            width: 100%;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* První rok na stránce nemá horní mezeru */
+        .year-label:first-of-type {
+            margin-top: 0;
+        }
+
+        /* KONTEJNER PRO MASONRY (SLOUPCE) */
+        .text-content {
+            /* Prohlížeč se snaží udržet 3 sloupce */
+            column-count: 3;
+            column-gap: 30px; /* Mezera mezi sloupci */
+            width: 100%;
+        }
+
+        /* JEDNOTLIVÝ PROJEKT */
+        .projekt-item {
+            display: inline-block; /* Zásadní pro správné fungování columns */
+            width: 100%;
+            margin-bottom: 50px; /* Mezera pod projektem (svisle) */
+            break-inside: avoid; /* Zabrání rozdělení projektu do dvou sloupců */
+            line-height: 1.4;
+            color: #ccc;
+            font-size: 0.8rem;
+        }
+
+        /* STYL ODKAZŮ A MÉDIÍ */
+        .projekt-item a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .projekt-item a:hover {
+            opacity: 0.8;
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .projekt-title {
+            font-weight: bold;
+            display: block;
+            color: #fff;
+            margin-bottom: 5px;
+            text-transform: none;
+        }
+
+        /* RESPONSIVITA (PŘEPÍNÁNÍ SLOUPCŮ) */
+
+        /* Tablet: Přepne na 2 sloupce */
+        @media (max-width: 1100px) {
+            .text-content {
+                column-count: 2;
+            }
+        }
+
+        /* Mobil a Landscape: Přepne na 1 sloupec */
+        @media (max-width: 768px), (max-height: 500px) and (orientation: landscape) {
+            .projekty-text-wrapper {
+                padding: 5rem 1.5rem 2rem 1.5rem;
+            }
+            .text-content {
+                column-count: 1 !important; /* Vynutí jeden sloupec pod sebou */
+            }
+            .year-label {
+                margin-top: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="nav-placeholder"></div>
 
     <main class="content-column">
+        <div class="projekty-text-wrapper">
 
-        <div class="projekty-list-container">
+            <span class="year-label">2025</span>
+            
+            <div class="text-content">
 
-            <h1>Projekty</h1>
-
-            <div class="project-item">
-                <a class="project-item-link" href="../city smog super swag/city smog super swag.html">
-                    City Smog Super Swag
-                </a>
-
-                <div class="project-preview">
-                    <video src="../city smog super swag/assets/Zelen� 1.webm"
-                           autoplay muted loop playsinline></video>
+                <div class="projekt-item">
+                    <a href="../book/bookengine.html">
+                        <img src="omnezkouskafotka.webp" class="banner">
+                        <span class="projekt-title">Portfolio 25</span>
+                        bdb
+                    </a>
                 </div>
-            </div>
 
-            <div class="project-item">
-                <a class="project-item-link" href="../1.txt/1.txt.html">
-                    1.TXT
-                </a>
-
-                <div class="project-preview">
-                    <img src="../1.txt/preview.jpg" alt="N�hled projektu 1.TXT">
+                <div class="projekt-item">
+                    <a href="https://bertik.kunstmullermatyas.cz">
+                        <video src="showcase animace panaček_1.webm" class="banner" autoplay muted loop playsinline></video>
+                        <span class="projekt-title">bertik</span>
+                        Počítačový program který zachycuje vzpomínky. Zaměřuje se na schopnost paměti, a co představuje v tom nejzákladnějším.
+                    </a>
                 </div>
-            </div>
 
-        </div>
+                <div class="projekt-item">
+                    <a href="../bez filtru/bez.filtru.html">
+                        <img src="bez filtru_fotodokumentace knížky-10.webp" class="banner">
+                        <span class="projekt-title">Bez filtru</span>
+                        Autorský deník zachycující období prozkoumávání modifikací kompaktu. Fotografie jsou doplněné o autorské vstupy.
+                    </a>
+                </div>
+
+                <div class="projekt-item">
+                    <a href="../font/font.html">
+                        <video src="blokkada.webm" class="banner" autoplay muted loop playsinline></video>
+                        <span class="projekt-title">Blokkada</span>
+                        Autorský variable font, jehož cílem bylo prozkoumat technické a kreativní možnosti proměnlivého písma.
+                    </a>
+                </div>
+
+                <div class="projekt-item">
+                    <a href="../book/bookengine.html">
+                        <img src="omnezkouskafotka.webp" class="banner">
+                        <span class="projekt-title">školní práce 3.GD</span>
+                        bdb
+                    </a>
+                </div>
+
+                <div class="projekt-item">
+                    <a href="../1.txt/1.txt.html">
+                        <video src="1-TXT.webm" class="banner" autoplay muted loop playsinline></video>
+                        <span class="projekt-title">1.TXT</span>
+                        Otevřený projekt založený na spontánním sběru scenů pomocí ručního skeneru.
+                    </a>
+                </div>
+
+                <div class="projekt-item">
+                    <a href="../book/bookengine.html?spread=7#spread=0">
+                        <video src="typotrip.webm" class="banner" autoplay muted loop playsinline></video>
+                        <span class="projekt-title">Typotrip</span>
+                        Koncepční návrh vizuální identity pro třídní výstavu.
+                    </a>
+                </div>
+
+
+                <div class="projekt-item">
+                    <a href="../book/bookengine.html?spread=2#spread=0">
+                        <video src="s3b.webm" class="banner" autoplay muted loop playsinline></video>
+                        <span class="projekt-title">S3B</span>
+                        Triptych animovaných plakátů, který vizuálně interpretuje tři stavy studentského života.
+                    </a>
+                </div>
+
+                <div class="projekt-item">
+                    <a href="../book/bookengine.html?spread=3#spread=0">
+                        <video src="360.webm" class="banner" autoplay muted loop playsinline></video>
+                        <span class="projekt-title">360</span>
+                        Myšlenku k tomuto projektu se staly práce studentů přípravných kurzů.
+                    </a>
+                </div>
+
+
+            </div> <span class="year-label">2024</span>
+            
+            <div class="text-content">
+
+                <div class="projekt-item">
+                    <a href="../book/bookengine.html">
+                        <img src="omnezkouskafotka.webp" class="banner">
+                        <span class="projekt-title">Portfolio 25 (Starší)</span>
+                        Archivní práce z roku 2024.
+                    </a>
+                </div>
+
+            </div> </div>
     </main>
 
     <script src="../../nav.js"></script>
     <script>
-        // Cesta je '../../' a ID str�nky je 'projekty'
-        createNav('../../', 'projekty');
+        if (typeof createNav === 'function') {
+            createNav('../../', 'projekty');
+        }
     </script>
 </body>
 </html>

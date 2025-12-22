@@ -39,6 +39,11 @@
             line-height: 1.6;
             color: #ccc;
         }
+                .banner {
+    max-width: 1500px;  /* Zde si nastavte své maximum (např. v pixelech) */
+    width: 100%;       /* Zajistí, že se fotka zúží podle šířky obrazovky */
+    height: auto;      /* Důležité: zachová správný poměr stran, aby se fotka nedeformovala */
+   }
     </style>
 </head>
 <body>
@@ -51,7 +56,7 @@
         </div>
 
         <div id="final-content" class="real-content">
-            <img src="https://via.placeholder.com/400x500" class="profile-img" alt="Matyas Kunstmüller">
+           <video src="fotkys.webm" class="banner" autoplay muted loop playsinline></video>
             <div class="bio-text">
                 <p>O mně</p>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer in sapien. Duis pulvinar. Mauris elementum mauris vitae tortor. Duis viverra diam non justo. Mauris elementum mauris vitae tortor. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. In dapibus augue non sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Etiam dictum tincidunt diam.</p>

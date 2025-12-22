@@ -140,8 +140,10 @@ Počítačový program který zachycuje vzpomínky. Zaměřuje se na schopnost p
     // LEVÁ STRANA: Busking
     {
         spread: 6,
-        text: `Pilsen Busking fest`,
-        styles: { top: '2%', left: '1%', width: '19%', height: '4%' }
+        text: `Pilsen Busking fest
+        
+        Klauzurní práce. Inspiroval jsem se autorskými plakáty pouličních umělců a simuloval je ve Photoshopu.`,
+        styles: { top: '4%', left: '1%', width: '48%', height: '10%' }
     },
     {
         spread: 6,
@@ -185,7 +187,9 @@ Počítačový program který zachycuje vzpomínky. Zaměřuje se na schopnost p
     // =================================
     {
         spread: 7,
-        text: `Koncepční návrh vizuální identity pro třídní výstavu. Ve frustraci nepovedených návrhů jsem se rozhodl pro použití fotografií divokého prostoru ve kterém se vystavovalo, a pro zvýraznění jeho charakteru jsem fotky upravil do silně neonových barev. Série fotografií mě bavila ale samotné fotografie na plakát nestačili a tak jsem se rozhodl pro prosákávání fotografií do loopu v motion posteru pro ukázání celého prostoru.`,
+        text: `Typotrip
+        
+        Koncepční návrh vizuální identity pro třídní výstavu. Ve frustraci nepovedených návrhů jsem se rozhodl pro použití fotografií divokého prostoru ve kterém se vystavovalo, a pro zvýraznění jeho charakteru jsem fotky upravil do silně neonových barev. Série fotografií mě bavila ale samotné fotografie na plakát nestačili a tak jsem se rozhodl pro prosákávání fotografií do loopu v motion posteru pro ukázání celého prostoru.`,
         styles: { top: '6%', left: '1%', width: '48%', height: '28%' }
     },
     {
@@ -224,8 +228,10 @@ Počítačový program který zachycuje vzpomínky. Zaměřuje se na schopnost p
     // =================================
     {
         spread: 8,
-        text: `Autorský variable font, jehož cílem bylo prozkoumat technické a kreativní možnosti proměnlivého písma. Jeho design vychází z geometrického gridu 3×8 a je charakteristický motivem dvojitých spojů. Font disponuje dvěma proměnnými osami, které ovládají výšku a tloušťku tahu. Projekt se vyvinul od skic na papíře až po finální zpracování v programu FontLab, kde byly definovány mastry a logika interpolace.`,
-        styles: { top: '14%', left: '1%', width: '48%', height: '20%' }
+        text: `Blokkada
+        
+        Autorský variable font, jehož cílem bylo prozkoumat technické a kreativní možnosti proměnlivého písma. Jeho design vychází z geometrického gridu 3×8 a je charakteristický motivem dvojitých spojů. Font disponuje dvěma proměnnými osami, které ovládají výšku a tloušťku tahu. Projekt se vyvinul od skic na papíře až po finální zpracování v programu FontLab, kde byly definovány mastry a logika interpolace.`,
+        styles: { top: '8%', left: '1%', width: '48%', height: '20%' }
     },
 
     // =================================
@@ -234,14 +240,23 @@ Počítačový program který zachycuje vzpomínky. Zaměřuje se na schopnost p
     // (Ve starém souboru u Autorské knížky nebyl text, nechávám placeholder)
     {
         spread: 9,
-        text: `Bez Filtru / Autorská knížka`,
-        styles: { top: '6%', left: '1%', width: '48%', height: '20%' }
+        text: `Autorská knížka
+        
+        Autorský deník zachycující období prozkoumávání modifikací kompaktu. Fotografie jsou doplněné o autorské vstupy vložené přímo do obrazu, které popisují tvůrčí proces a vývoj celého projektu`,
+        styles: { top: '6%', left: '1%', width: '48%', height: '13%' }
     },
 
     // =================================
     // City Smog (Spread 10)
     // =================================
     // (Přesunuto z 11 na 10, media zachována)
+    {
+        spread: 10,
+        text: `City  smog super swag
+        
+        Interaktivní instalace, která proměňuje běžné světelné a zvukové podněty města v hudební a vizuální zážitek. Divák může pomocí  pohybu v TouchDesigneru tyto prvky v reálném čase ovládat.`,
+        styles: { top: '6%', left: '1%', width: '48%', height: '17%' }
+    },
     {
         spread: 10,
         mediaSrc: 'media/showcase naživo.webm',
@@ -301,7 +316,9 @@ Počítačový program který zachycuje vzpomínky. Zaměřuje se na schopnost p
     // (Přesunuto z 12 na 11, text doplněn)
     {
         spread: 11,
-        text: `Otevřený projekt založený na spontánním sběru scenů pomocí ručního skeneru. Během každodenního pohybu v prostoru skenuji povrchy a materiály, které mě vizuálně zaujmou. Výsledné skeny jsou prezentovány jako abstraktní textury zbavené původního kontextu, čímž je kladen důraz na jejich samostatný vizuální potenciál.`,
+        text: `1.TXT
+        
+        Otevřený projekt založený na spontánním sběru scenů pomocí ručního skeneru. Během každodenního pohybu v prostoru skenuji povrchy a materiály, které mě vizuálně zaujmou. Výsledné skeny jsou prezentovány jako abstraktní textury zbavené původního kontextu, čímž je kladen důraz na jejich samostatný vizuální potenciál.`,
         styles: { top: '6%', left: '1%', width: '48%', height: '20%' }
     },
 ];
